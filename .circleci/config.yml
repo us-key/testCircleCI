@@ -14,4 +14,4 @@ jobs:
           pytest test_calculations.py --junit-xml=test-results/pytest.xml
       # テスト結果を保存する
       - store_test_results:
-        path: test-results
+          path: test-results
