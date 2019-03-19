@@ -4,7 +4,14 @@ jobs:
     docker:
       - image: circleci/python:3.6
     steps:
-      # ソースコードのチェックアウト
       - checkout
-      # unittestコマンドの実行
-      - run: python test_calculations.py
+      - run: |
+          python3.6 -m venv venv
+          source ./venv/bin/activate
+          # pytestインストール
+          pip install pytest
+          # pytestコマンド実行
+          pytest test_calculations.py --junit-xml=test-results/pytest.xml
+      # テスト結果を保存する
+      - store_test_results:
+        path: test-results
