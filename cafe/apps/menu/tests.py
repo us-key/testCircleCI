@@ -28,7 +28,7 @@ class TestSearchFormTest(unittest.TestCase):
         """名称と種類のどちらも入力しないとエラーになることを検証する"""
         params = dict()
         form = TeaSearchForm(params)
-        self.assertEqual(form.is_valid(), False, form.erros.as_text())
+        self.assertEqual(form.is_valid(), False, form.errors.as_text())
     
     def test_either2(self):
         """名称を入力すればエラーにならないことを検証する。"""
