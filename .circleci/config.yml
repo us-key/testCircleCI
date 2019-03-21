@@ -10,8 +10,15 @@ jobs:
           source ./venv/bin/activate
           # pytestインストール
           pip install pytest
+          # djangoインストール
+          pip install django==2.1.7
           # pytestコマンド実行
           pytest test_calculations.py --junit-xml=test-results/pytest.xml
+          # djangoテスト
+          cd cafe/apps
+          python manage.py migrate
+          python manage.py test
+          
       # テスト結果を保存する
       - store_test_results:
           path: test-results
