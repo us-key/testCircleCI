@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 TEA_KINDS = (
     ("english", "英国紅茶"),
-    ("chinise", "中国茶"),
+    ("chinese", "中国茶"),
     ("japanese", "日本茶"),
 )
 

@@ -16,7 +16,7 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('name', models.CharField(max_length=255, verbose_name='名称')),
-                ('kind', models.CharField(choices=[('english', '英国紅茶'), ('chinise', '中国茶'), ('japanese', '日本茶')], max_length=255, verbose_name='種類')),
+                ('kind', models.CharField(choices=[('english', '英国紅茶'), ('chinese', '中国茶'), ('japanese', '日本茶')], max_length=255, verbose_name='種類')),
             ],
         ),
     ]
