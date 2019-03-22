@@ -21,6 +21,7 @@ jobs:
           python manage.py migrate
           python manage.py test
           # HTMLファイルの作成
+          cd ../../sw-project
           make html
           
       # テスト結果を保存する
